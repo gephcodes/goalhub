@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoalPlan AI — Clear Action Plans</title>
+    <script>
+      // Gracefully prevent and suppress benign Vite HMR websocket connection error popups/overlays
+      window.addEventListener('error', function(e) {
+        if (!e.message || e.message.includes('Script error.') || e.message.includes('WebSocket') || e.message.includes('websocket') || e.message.includes('vite')) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        const reason = e.reason && (e.reason.message || String(e.reason));
+        if (!reason || reason.includes('Script error.') || reason.includes('WebSocket') || reason.includes('websocket') || reason.includes('vite')) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

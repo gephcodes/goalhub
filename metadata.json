@@ -1,0 +1,6 @@
+{
+  "name": "GoalPlan AI",
+  "description": "AI-Powered Goal Action Planner that converts any ambition into a structured, executable action plan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
